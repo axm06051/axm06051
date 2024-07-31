@@ -8,4 +8,9 @@ if (Test-Path($ChocolateyProfile))
   Import-Module "$ChocolateyProfile"
 }
 
+function vs
+{ 
+  Start-Process devenv -ArgumentList $args 
+}
+
 Oh-My-Posh init pwsh --config "$env:POSH_THEMES_PATH\powerlevel10k_modern.omp.json" | Invoke-Expression
